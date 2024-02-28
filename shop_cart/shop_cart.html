@@ -1,479 +1,766 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="shop_cart.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1.0, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="shop_cart.css" />
+    <link rel="stylesheet" href="shop_cart_responsive.css" />
+    <link rel="stylesheet" href="../index_responsive.css" />
     <title>Shop cart</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="index-headerbg">
-        <div class="index-margin-x index-header">
-            <div class="header-contact">
-                <div class="header-text header-flex">
-                    <img src="../assets/icons/headphone.svg" alt="headphone icon" class="header-icon">
-                    <span>+1 916-85-2235</span>
-                </div>
-                <div class="header-flex">
-                    <img src="../assets/icons/twitter.svg" alt="twitter logo" class="header-icon">
-                    <img src="../assets/icons/facebook.svg" alt="facebook logo" class="header-icon">
-                    <img src="../assets/icons/linkedin.svg" alt="linkedin logo" class="header-icon">
-                    <img src="../assets/icons/googleplus.svg" alt="googleplus logo" class="header-icon">
-                    <img src="../assets/icons/instagram.svg" alt="instagram logo" class="header-icon">
-                    <img src="../assets/icons/youtube.svg" alt="youtube logo" class="header-icon">
-                    <img src="../assets/icons/pinterest.svg" alt="pinterest logo" class="header-icon">
-                </div>
-            </div>
-
-            <div class="header-menu header-flex">
-                <div class="header-flex header-text">
-                    <p class="header-menu-p">My Account</p>
-                    <p class="header-menu-p">FAQ</p>
-                    <p class="header-menu-p">Contact Us</p>
-                    <p class="header-menu-p">Newsletter Signup</p>
-                    <p class="header-menu-p">Shipping Terms</p>
-                </div>
-                <div style="padding-left: 30px;">
-                    <button class="btn header-btn">My Wishlist</button>
-                </div>
-
-            </div>
+      <div class="index-margin-x index-header">
+        <div class="header-contact">
+          <div class="header-text header-flex">
+            <img
+              src="../assets/icons/headphone.svg"
+              alt="headphone icon"
+              class="header-icon"
+            />
+            <span>+1 916-85-2235</span>
+          </div>
+          <div class="header-flex">
+            <img
+              src="../assets/icons/twitter.svg"
+              alt="twitter logo"
+              class="header-icon"
+            />
+            <img
+              src="../assets/icons/facebook.svg"
+              alt="facebook logo"
+              class="header-icon"
+            />
+            <img
+              src="../assets/icons/linkedin.svg"
+              alt="linkedin logo"
+              class="header-icon"
+            />
+            <img
+              src="../assets/icons/googleplus.svg"
+              alt="googleplus logo"
+              class="header-icon"
+            />
+            <img
+              src="../assets/icons/instagram.svg"
+              alt="instagram logo"
+              class="header-icon"
+            />
+            <img
+              src="../assets/icons/youtube.svg"
+              alt="youtube logo"
+              class="header-icon"
+            />
+            <img
+              src="../assets/icons/pinterest.svg"
+              alt="pinterest logo"
+              class="header-icon"
+            />
+          </div>
         </div>
+
+        <div class="header-menu header-flex">
+          <div class="header-flex header-text">
+            <p class="header-menu-p">My Account</p>
+            <p class="header-menu-p">FAQ</p>
+            <p class="header-menu-p">Contact Us</p>
+            <p class="header-menu-p">Newsletter Signup</p>
+            <p class="header-menu-p">Shipping Terms</p>
+          </div>
+          <div class="wishlist-btn">
+            <button class="btn header-btn">My Wishlist</button>
+          </div>
+        </div>
+      </div>
     </header>
     <div class="navbar">
-        <div class="index-margin-x navbar-content header-flex">
-            <div class="brand-logo">
-                <img src="../assets/icons/logo.svg" alt="logo" class="logo">
-                <span class="brand">THEGEM</span>
+      <div class="index-margin-x navbar-content header-flex">
+        <div class="brand-logo">
+          <img src="../assets/icons/logo.svg" alt="logo" class="logo" />
+          <span class="brand">THEGEM</span>
+        </div>
+        <div class="navbar-buttons" id="drawer">
+          <img
+            src="../assets/icons/cross.svg"
+            alt="exit"
+            class="navbar-buttons-icon btn"
+            id="close-drawer"
+          />
+          <div class="navbar-buttons-search-cart">
+            <div class="search">
+              <input
+                type="text"
+                name="search"
+                id="search"
+                class="search-inp input"
+              />
+              <img
+                src="../assets/icons/search.svg"
+                alt="search button"
+                class="search-btn btn"
+              />
             </div>
-            <ul id="inline-list">
-                <li>HOME</li>
-                <li>PAGES</li>
-                <li>BLOG</li>
-                <li>PORTFOLIOS</li>
-                <li>SHOP</li>
-                <li>FEATURES</li>
-                <li>ELEMENTS</li>
+            <img src="../assets/icons/cart.svg" alt="Go to cart" class="btn" />
+          </div>
+          <ul id="inline-list">
+            <li>HOME</li>
+            <li>PAGES</li>
+            <li>BLOG</li>
+            <li>PORTFOLIOS</li>
+            <li>SHOP</li>
+            <li>FEATURES</li>
+            <li>ELEMENTS</li>
+            <li>
+              <img
+                src="../assets/icons/ukflag.svg"
+                alt="language"
+                class="navbar-icon header-flex btn"
+              />
+            </li>
+            <li class="navbar-search">
+              <input
+                type="text"
+                name="navbar-search-inp"
+                id="navbar-search-inp"
+                placeholder="Typing to search..."
+              />
+              <img
+                src="../assets/icons/search.svg"
+                alt="search icon"
+                class="navbar-icon header-flex btn"
+                id="search-icon"
+                onclick="openSearch(this)"
+              />
+              <img
+                src="../assets/icons/cross.svg"
+                alt="exit"
+                class="navbar-icon header-flex navbar-cross-icon btn"
+                id="close-search"
+                onclick="closeSearch(this)"
+              />
+            </li>
+            <li class="navbar-cart-icon">
+              <img
+                src="../assets/icons/shoppingbasket.svg"
+                alt="cart icon"
+                class="navbar-icon header-flex btn"
+              />
+              <div class="polygon"><span class="cart-quantity">2</span></div>
+            </li>
+          </ul>
+        </div>
+        <img src="../assets/icons/menu.svg" alt="menu icon" id="navbar-menu" />
+      </div>
+    </div>
+    <div class="slider">
+      <div class="index-margin-x header-flex">
+        <div class="slider-text">
+          <div>
+            <span class="woo">WOO </span>
+            <span class="cart">CART</span>
+          </div>
+          <ul class="breadcrumbs">
+            <li>Home</li>
+            <li>Breadcrumbs Example</li>
+            <li>Second Level</li>
+            <li>Third Level</li>
+          </ul>
+        </div>
+        <img
+          src="../assets/icons/cart.svg"
+          alt="shopping cart"
+          class="shopping-cart-icon"
+        />
+      </div>
+    </div>
+    <div class="index-margin-x">
+      <div class="cart-body">
+        <p class="cart-quantity-text">
+          You have <span class="blue-text">3 items</span> in your cart
+        </p>
+        <div class="cart-table">
+          <div class="cart-table-row">
+            <div class="cart-table-delete-item cart-table-head"></div>
+            <div class="cart-table-item cart-table-head">
+              <div class="cart-table-item-product">PRODUCT</div>
+              <div class="cart-table-item-inf">
+                <div class="item-inf-price">PRICE</div>
+                <div class="item-inf-quantity">QUANTITY</div>
+                <div class="item-inf-total">TOTAL</div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-table-row" id="cart-item1">
+            <div class="cart-table-delete-item">
+              <img
+                src="../assets/icons/delete.svg"
+                alt="delete"
+                onclick="deleteItem(this)"
+                class="btn"
+              />
+            </div>
+            <div class="cart-table-item">
+              <div class="cart-table-item-product cart-table-cell-content">
+                <img src="../assets/icons/square.svg" alt="product's image" />
+                <span class="product-name">Lorem ipsum dolor sit amet</span>
+                <span class="product-note">Size: Large, Color: Black</span>
+              </div>
+              <div class="cart-table-item-inf">
+                <div class="item-inf-price cart-table-cell-content">
+                  <p class="cart-digit">$1285.00</p>
+                </div>
+                <div class="item-inf-quantity cart-table-cell-content">
+                  <div class="quantity">
+                    <button
+                      class="btn update-item-btn decrease"
+                      onclick="decreaseQuantity(this,'cart-item1')"
+                    >
+                      -
+                    </button>
+                    <span class="item-quantity">1</span>
+                    <button
+                      class="btn update-item-btn increase"
+                      onclick="increaseQuantity(this)"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <div class="item-inf-total cart-table-cell-content">
+                  $1285.00
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-table-row" id="cart-item2">
+            <div class="cart-table-delete-item">
+              <img
+                src="../assets/icons/delete.svg"
+                alt="delete"
+                onclick="deleteItem(this)"
+                class="btn"
+              />
+            </div>
+            <div class="cart-table-item">
+              <div class="cart-table-item-product cart-table-cell-content">
+                <img src="../assets/icons/square.svg" alt="product's image" />
+                <span class="product-name">Lorem ipsum</span>
+                <span class="product-note">Size: Small, Color: Black</span>
+              </div>
+              <div class="cart-table-item-inf">
+                <div class="item-inf-price cart-table-cell-content">
+                  <p class="cart-digit">$1285.00</p>
+                </div>
+                <div class="item-inf-quantity cart-table-cell-content">
+                  <div class="quantity">
+                    <button
+                      class="btn update-item-btn decrease"
+                      onclick="decreaseQuantity(this,'cart-item2')"
+                    >
+                      -
+                    </button>
+                    <span class="item-quantity">1</span>
+                    <button
+                      class="btn update-item-btn increase"
+                      onclick="increaseQuantity(this)"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <div class="item-inf-total cart-table-cell-content">
+                  $1285.00
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-table-row" id="cart-item3">
+            <div class="cart-table-delete-item">
+              <img
+                src="../assets/icons/delete.svg"
+                alt="delete"
+                onclick="deleteItem(this)"
+                class="btn"
+              />
+            </div>
+            <div class="cart-table-item">
+              <div class="cart-table-item-product cart-table-cell-content">
+                <img src="../assets/icons/square.svg" alt="product's image" />
+                <span class="product-name">Lorem ipsum dolor sit amet</span>
+                <span class="product-note">Size: Large, Color: Black</span>
+              </div>
+              <div class="cart-table-item-inf">
+                <div class="item-inf-price cart-table-cell-content">
+                  <p class="cart-digit">$85.00</p>
+                </div>
+                <div class="item-inf-quantity cart-table-cell-content">
+                  <div class="quantity">
+                    <button
+                      class="btn update-item-btn decrease"
+                      onclick="decreaseQuantity(this,'cart-item3')"
+                    >
+                      -
+                    </button>
+                    <span class="item-quantity">1</span>
+                    <button
+                      class="btn update-item-btn increase"
+                      onclick="increaseQuantity(this)"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <div class="item-inf-total cart-table-cell-content">$85.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-table-row" id="cart-item4">
+            <div class="cart-table-delete-item">
+              <img
+                src="../assets/icons/delete.svg"
+                alt="delete"
+                onclick="deleteItem(this)"
+                class="btn"
+              />
+            </div>
+            <div class="cart-table-item">
+              <div class="cart-table-item-product cart-table-cell-content">
+                <img src="../assets/icons/square.svg" alt="product's image" />
+                <span class="product-name">Lorem ipsum dolor sit amet</span>
+                <span class="product-note">Size: Large, Color: Black</span>
+              </div>
+              <div class="cart-table-item-inf">
+                <div class="item-inf-price cart-table-cell-content">
+                  <p class="cart-digit">$145.00</p>
+                </div>
+                <div class="item-inf-quantity cart-table-cell-content">
+                  <div class="quantity">
+                    <button
+                      class="btn update-item-btn decrease"
+                      onclick="decreaseQuantity(this,'cart-item4')"
+                    >
+                      -
+                    </button>
+                    <span class="item-quantity">1</span>
+                    <button
+                      class="btn update-item-btn increase"
+                      onclick="increaseQuantity(this)"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <div class="item-inf-total cart-table-cell-content">
+                  $145.00
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tfoot">
+          <div class="tfoot-content">
+            <div class="apply-coupon">
+              <input
+                type="text"
+                placeholder="Enter Coupon Code Here"
+                class="input coupon-input"
+              />
+              <button class="btn cart-btn apply-btn">APPLY</button>
+            </div>
+            <div class="update-checkout">
+              <button class="btn cart-btn update-btn">UPDATE CART</button>
+              <button class="btn cart-btn checkout-btn">
+                <img
+                  src="../assets/icons/CircleCheckbox.svg"
+                  alt="circle checkbox"
+                  class="circle-checkbox"
+                />
+                <span>CHECKOUT</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cart-calculate">
+          <div class="cal-shipping">
+            <p class="cal-text">CALCULATE SHIPPING</p>
+            <div class="shipping-inf">
+              <select name="country" id="country" class="select-country">
+                <option value="" disabled selected hidden>
+                  Select Your Country
+                </option>
+                <option value="1">Viet Nam</option>
+                <option value="2">Japan</option>
+              </select>
+              <div class="state-zip-inf">
+                <input
+                  type="text"
+                  placeholder="State / County"
+                  class="input state-zip-inp"
+                />
+                <div class="space"></div>
+                <input
+                  type="text"
+                  placeholder="Postcode / Zip"
+                  class="input state-zip-inp"
+                />
+              </div>
+            </div>
+            <button class="btn update-total-btn">UPDATE TOTALS</button>
+          </div>
+          <div class="cart-total">
+            <p class="cal-text">CART TOTALS</p>
+            <table class="cart-total-table">
+              <tr>
+                <td>Subtotal</td>
+                <td>$1285.99</td>
+              </tr>
+              <tr>
+                <td>Shipping and Handling</td>
+                <td>
+                  <div>
+                    <p class="fee">Flat Rate: $3.99</p>
+                    <p class="fee">Free Shipping</p>
+                    <p class="fee">Flat Rate: $12.99</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>$2015.00</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="recommend">
+          <div class="recommend-header">
+            <p class="recommend-text">YOU MAY BE INTERETED IN</p>
+            <div class="line"></div>
+          </div>
+
+          <div class="recommend-items">
+            <div class="recommend-item">
+              <img
+                src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
+                alt="cat"
+                class="item-img"
+              />
+              <div class="item-inf">
+                <p class="item-name">Denim Classy Shorts</p>
+                <p class="item-price">$35.00-$89.99</p>
+              </div>
+            </div>
+            <div class="recommend-item">
+              <img
+                src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
+                alt="cat"
+                class="item-img"
+              />
+              <div class="item-inf">
+                <p class="item-name">Denim Classy Shorts</p>
+                <p class="item-price">$35.00-$89.99</p>
+              </div>
+            </div>
+            <div class="recommend-item">
+              <img
+                src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
+                alt="cat"
+                class="item-img"
+              />
+              <div class="item-inf">
+                <p class="item-name">Denim Classy Shorts</p>
+                <p class="item-price">$35.00-$89.99</p>
+              </div>
+            </div>
+            <div class="recommend-item">
+              <img
+                src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
+                alt="cat"
+                class="item-img"
+              />
+              <div class="item-inf">
+                <p class="item-name">Denim Classy Shorts</p>
+                <p class="item-price">$35.00-$89.99</p>
+              </div>
+            </div>
+            <div class="recommend-item">
+              <img
+                src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
+                alt="cat"
+                class="item-img"
+              />
+              <div class="item-inf">
+                <p class="item-name">Denim Classy Shorts</p>
+                <p class="item-price">$35.00-$89.99</p>
+              </div>
+            </div>
+            <div class="recommend-item">
+              <img
+                src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
+                alt="cat"
+                class="item-img"
+              />
+              <div class="item-inf">
+                <p class="item-name">Denim Classy Shorts</p>
+                <p class="item-price">$35.00-$89.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="index-footer">
+      <div class="index-margin-x">
+        <div class="footer-grid">
+          <div class="thegem-inf">
+            <div class="thegem-inf-block1">
+              <div class="thegem">
+                <img
+                  src="../assets/icons/bluestar.svg"
+                  alt="logo brand"
+                  class="logo-brand"
+                />
+                <div>
+                  <p class="the">THE</p>
+                  <p class="gem">GEM</p>
+                </div>
+              </div>
+              <p class="footer-text">
+                Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                sollicitudin, lorem quis bibendum auctor, nisi elit consequat
+                ipsum, nec sagittis sem nibh id elit. Duis sed odio
+              </p>
+            </div>
+            <div>
+              <p class="footer-title">CONTACT</p>
+              <div class="footer-text address">
+                <div>
+                  <img
+                    src="../assets/icons/location.svg"
+                    alt="location icon"
+                    class="footer-icon"
+                  />
+                  <span>Address</span>
+                </div>
+
+                <p>908 New Hampshire Avenue Northwest</p>
+                <p>#100, Washington, DC</p>
+                <p>20037, United States</p>
+              </div>
+              <div class="footer-text">
+                <div class="contact-list">
+                  <img
+                    src="../assets/icons/headphone.svg"
+                    alt="location icon"
+                    class="footer-icon"
+                  />
+                  <span>Phone: +1 916-875-2235</span>
+                </div>
+                <div class="contact-list">
+                  <img
+                    src="../assets/icons/fax.svg"
+                    alt="location icon"
+                    class="footer-icon"
+                  />
+                  <span>Fax: +1 916-875-2235</span>
+                </div>
+                <div class="contact-list">
+                  <img
+                    src="../assets/icons/email.svg"
+                    alt="location icon"
+                    class="footer-icon"
+                  />
+                  <span
+                    >Email:<span class="blue-text"> info@domain.ltd</span></span
+                  >
+                </div>
+                <div class="contact-list">
+                  <img
+                    src="../assets/icons/web.svg"
+                    alt="location icon"
+                    class="footer-icon"
+                  />
+                  <span
+                    >Website:
+                    <span class="blue-text"> www.codex-themes.com</span></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-block">
+            <p class="footer-title">RECENT POSTS</p>
+            <div class="post">
+              <img
+                src="https://mtv.vn/uploads/2023/02/25/meo-gg.jpg"
+                alt="post-image"
+                class="post-img"
+              />
+              <div class="post-content footer-text">
+                <div class="post-desc">
+                  Proin gravida nibh vel velit auctor aliquet aenean
+                </div>
+                <div class="post-inf">
+                  <p class="blue-text">27 Dec 2015</p>
+                  <div>
+                    <img
+                      src="../assets/icons/wechat.svg"
+                      alt="comment icon"
+                      class="footer-icon"
+                    />
+                    <span>0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post">
+              <img
+                src="https://mtv.vn/uploads/2023/02/25/meo-gg.jpg"
+                alt="post-image"
+                class="post-img"
+              />
+              <div class="post-content footer-text">
+                <div class="post-desc">
+                  Proin gravida nibh vel velit auctor aliquet aenean...
+                </div>
+                <div class="post-inf">
+                  <p class="blue-text">27 Dec 2015</p>
+                  <div>
+                    <img
+                      src="../assets/icons/wechat.svg"
+                      alt="comment icon"
+                      class="footer-icon"
+                    />
+                    <span>0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post">
+              <img
+                src="https://mtv.vn/uploads/2023/02/25/meo-gg.jpg"
+                alt="post-image"
+                class="post-img"
+              />
+              <div class="post-content footer-text">
+                <div class="post-desc">
+                  Proin gravida nibh vel velit auctor aliquet aenean
+                </div>
+                <div class="post-inf">
+                  <p class="blue-text">27 Dec 2015</p>
+                  <div>
+                    <img
+                      src="../assets/icons/wechat.svg"
+                      alt="comment icon"
+                      class="footer-icon"
+                    />
+                    <span>0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-block">
+            <p class="footer-title">EMAIL US</p>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="input email-inp"
+              placeholder="Your name"
+            />
+            <input
+              type="text"
+              name="email"
+              id="email"
+              class="input email-inp"
+              placeholder="Your email"
+            />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="4"
+              class="input email-inp"
+              placeholder="Your message"
+            ></textarea>
+            <button class="btn send-btn">SEND MESSAGE</button>
+          </div>
+          <div>
+            <p class="footer-title">FLICKR FEED</p>
+            <div class="feed-grid-container">
+              <div class="feed-grid-item"></div>
+              <div class="feed-grid-item"></div>
+              <div class="feed-grid-item"></div>
+              <div class="feed-grid-item"></div>
+              <div class="feed-grid-item"></div>
+              <div class="feed-grid-item"></div>
+              <div class="feed-grid-item"></div>
+              <div class="feed-grid-item"></div>
+              <div class="feed-grid-item"></div>
+            </div>
+          </div>
+          <div>
+            <p class="footer-title">USEFUL LINKS</p>
+            <ul class="ul-links footer-text">
+              <li>General Information For Users</li>
+              <li>General Information For Users</li>
+              <li>General Information For Users</li>
+              <li>General Information For Users</li>
+              <li>General Information For Users</li>
             </ul>
-            <div class="header-flex">
-                <button class="header-flex btn">
-                    <img src="../assets/icons/ukflag.svg" alt="language" class="navbar-icon">
-                </button>
-
-                <button class="header-flex btn">
-                    <img src="../assets/icons/search.svg" alt="search icon" class="navbar-icon"></button>
-
-
-                <button class="header-flex btn">
-                    <img src="../assets/icons/shoppingbasket.svg" alt="cart icon" class="navbar-icon">
-                    <div class="polygon">
-                        <span class="cart-quantity">2</span>
-                    </div>
-                </button>
+          </div>
+          <div class="footer-block">
+            <p class="footer-title">PROJECTS / CLIENTS ?</p>
+            <div class="proj-grid-container">
+              <div class="proj-grid-item"></div>
+              <div class="proj-grid-item"></div>
+              <div class="proj-grid-item"></div>
+              <div class="proj-grid-item"></div>
+              <div class="proj-grid-item"></div>
+              <div class="proj-grid-item"></div>
             </div>
+            <div class="dots">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div>
+            <p class="footer-title">NEWLETTERS</p>
+            <div class="newletter">
+              <p class="footer-text newletter-text">
+                Subscribe to our MailChimp newsletter and stay up to date with
+                all events coming straight in your mailbox:
+              </p>
+              <div>
+                <div class="newletter-email">
+                  <input
+                    type="text"
+                    name="newletter-email"
+                    id="newletter-email"
+                    class="input newletter-inp"
+                    placeholder="Your email address"
+                  />
+                  <button class="btn newletter-btn">></button>
+                </div>
+
+                <p class="footer-text-note">
+                  <span class="blue-text">*</span> Personal information will be
+                  encrypted
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="slider">
-            <div class="index-margin-x header-flex">
-                <div class="slider-text">
-                    <div class="">
-                        <span class="woo">WOO </span>
-                        <span class="cart">CART</span>
-                    </div>
-                    <ul class="breadcrumbs">
-                        <li>Home</li>
-                        <li>Breadcrumbs Example</li>
-                        <li>Second Level</li>
-                        <li>Third Level</li>
-                    </ul>
-                </div>
-                <img src="../assets/icons/cart.svg" alt="shopping cart" style="width: 96px;">
-            </div>
-
-        </div>
-        <div class="index-margin-x">
-            <div class="cart-body">
-                <p style="font-size: 16px; color: #74848f;">You have <span style="color: #00bcd4;">3 items</span> in
-                    your cart</p>
-                <table class="cart-table">
-                    <thead>
-                        <th style="width: 8%; text-align: center;"></th>
-                        <th style="width: 50%">PRODUCT</th>
-                        <th style="width: 14%">PRICE</th>
-                        <th style="width: 14%">QUANTITY</th>
-                        <th style="width: 14%">TOTAL</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img src="../assets/icons/delete.svg" alt="delete">
-                            </td>
-                            <td>
-                                <img src="../assets/icons/square.svg" alt="product's image">
-                                <span class="product-name">Lorem ipsum dolor sit amet</span>
-                                <span class="product-note">Size: Large, Color: Black</span>
-                            </td>
-                            <td>
-                                <p class="cart-digit">$35.99</p>
-                            </td>
-                            <td>
-                                <div class="quantity">
-                                    <button class="btn update-item-btn decrease">-</button>
-                                    <span class="item-quantity">1</span>
-                                    <button class="btn update-item-btn increase">+</button>
-                                </div>
-
-                            </td>
-                            <td class="cart-digit">$35.99</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../assets/icons/delete.svg" alt="delete">
-                            </td>
-                            <td>
-                                <img src="../assets/icons/square.svg" alt="product's image">
-                                <span class="product-name">Lorem ipsum dolor sit amet</span>
-                                <span class="product-note">Size: Large, Color: Black</span>
-                            </td>
-                            <td>
-                                <p class="cart-digit">$355.99</p>
-                            </td>
-                            <td>
-                                <div class="quantity">
-                                    <button class="btn update-item-btn decrease">-</button>
-                                    <span class="item-quantity">1</span>
-                                    <button class="btn update-item-btn increase">+</button>
-                                </div>
-                            </td>
-                            <td class="cart-digit">$355.99</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../assets/icons/delete.svg" alt="delete">
-                            </td>
-                            <td>
-                                <img src="../assets/icons/square.svg" alt="product's image">
-                                <span class="product-name">Lorem ipsum dolor sit amet</span>
-                                <span class="product-note">Size: Large, Color: Black</span>
-                            </td>
-                            <td>
-                                <p class="cart-digit">$1285.00</p>
-                            </td>
-                            <td>
-                                <div class="quantity">
-                                    <button class="btn update-item-btn decrease">-</button>
-                                    <span class="item-quantity">1</span>
-                                    <button class="btn update-item-btn increase">+</button>
-                                </div>
-                            </td>
-                            <td class="cart-digit">$1285.00</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="tfoot">
-                    <div class="tfoot-content">
-                        <div>
-                            <input type="text" placeholder="Enter Coupon Code Here" class="input coupon-input">
-                            <button class="btn cart-btn apply-btn">APPLY</button>
-                        </div>
-                        <div style="display: flex;">
-                            <button class="btn cart-btn update-btn">UPDATE CART</button>
-                            <button class="btn cart-btn checkout-btn">
-                                <img src="../assets/icons/CircleCheckbox.svg" alt="circle checkbox"
-                                    class="circle-checkbox">
-                                <span>CHECKOUT</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-calculate">
-                    <div class="cal-shipping">
-                        <p class="cal-text">CALCULATE SHIPPING</p>
-                        <div class="shipping-inf">
-                            <select name="" id="" class="select-country">
-                                <option value="" disabled selected hidden>Select Your Country</option>
-                                <option value="1">Viet Nam</option>
-                                <option value="2">Japan</option>
-                            </select>
-                            <div class="state-zip-inf">
-                                <input type="text" placeholder="State / County" class="input state-zip-inp">
-                                <div class="space"></div>
-                                <input type="text" placeholder="Postcode / Zip" class="input state-zip-inp">
-                            </div>
-                        </div>
-                        <button class="btn update-total-btn">UPDATE TOTALS</button>
-                    </div>
-                    <div style="width: 30px;"></div>
-                    <div class="cart-total">
-                        <p class="cal-text">CART TOTALS</p>
-                        <table class="cart-total-table">
-                            <tr>
-                                <td>Subtotal</td>
-                                <td>$1285.99</td>
-                            </tr>
-                            <tr>
-                                <td>Shipping and Handling</td>
-                                <td>
-                                    <div>
-                                        <p class="fee">Flat Rate: $3.99</p>
-                                        <p class="fee">Free Shipping</p>
-                                        <p class="fee">Flat Rate: $12.99</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>$2015.00</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="recommend">
-                    <div class="recommend-header">
-                        <p class="recommend-text">YOU MAY BE INTERETED IN</p>
-                        <div class="line"></div>
-                    </div>
-
-                    <div class="recommend-items">
-                        <div class="recommend-item">
-                            <img src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
-                                alt="cat" class="item-img">
-                            <div class="item-inf">
-                                <p class="item-name">Denim Classy Shorts</p>
-                                <p class="item-price">$35.00-$89.99</p>
-                            </div>
-                        </div>
-                        <div class="recommend-item">
-                            <img src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
-                                alt="cat" class="item-img">
-                            <div class="item-inf">
-                                <p class="item-name">Denim Classy Shorts</p>
-                                <p class="item-price">$35.00-$89.99</p>
-                            </div>
-                        </div>
-                        <div class="recommend-item">
-                            <img src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
-                                alt="cat" class="item-img">
-                            <div class="item-inf">
-                                <p class="item-name">Denim Classy Shorts</p>
-                                <p class="item-price">$35.00-$89.99</p>
-                            </div>
-                        </div>
-                        <div class="recommend-item">
-                            <img src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
-                                alt="cat" class="item-img">
-                            <div class="item-inf">
-                                <p class="item-name">Denim Classy Shorts</p>
-                                <p class="item-price">$35.00-$89.99</p>
-                            </div>
-                        </div>
-                        <div class="recommend-item">
-                            <img src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
-                                alt="cat" class="item-img">
-                            <div class="item-inf">
-                                <p class="item-name">Denim Classy Shorts</p>
-                                <p class="item-price">$35.00-$89.99</p>
-                            </div>
-                        </div>
-                        <div class="recommend-item">
-                            <img src="https://4.bp.blogspot.com/-KaiOX5sSAoE/WuoFsIqNPoI/AAAAAAAB6iM/I0V5BN_69SEE6a98ED02tUi_UMCQCII6ACLcBGAs/s1600/funny-cat-309-34.jpg"
-                                alt="cat" class="item-img">
-                            <div class="item-inf">
-                                <p class="item-name">Denim Classy Shorts</p>
-                                <p class="item-price">$35.00-$89.99</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="index-footer">
-            <div class="index-margin-x">
-                <div class="footer-grid">
-                    <div class="footer-grid-item">
-                        <div class="thegem-inf">
-                            <div class="thegem">
-                                <img src="../assets/icons/bluestar.svg" alt="logo brand" class="logo-brand">
-                                <div>
-                                    <p style="font-weight: 500;">THE</p>
-                                    <p style="font-weight: 700;">GEM</p>
-                                </div>
-                            </div>
-                            <p class="footer-text">
-                                Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-                                quis
-                                bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio
-                            </p>
-                        </div>
-                        <div>
-                            <p class="footer-title">CONTACT</p>
-                            <div class="footer-text address">
-                                <div>
-                                    <img src="../assets/icons/location.svg" alt="location icon" class="footer-icon">
-                                    <span>Address</span>
-                                </div>
-
-                                <p>908 New Hampshire Avenue Northwest</p>
-                                <p>#100, Washington, DC</p>
-                                <p>20037, United States</p>
-                            </div>
-                            <div class="footer-text">
-                                <div style="margin-bottom: 10px;">
-                                    <img src="../assets/icons/headphone.svg" alt="location icon" class="footer-icon">
-                                    <span>Phone: +1 916-875-2235</span>
-                                </div>
-                                <div style="margin-bottom: 10px;">
-                                    <img src="../assets/icons/fax.svg" alt="location icon" class="footer-icon">
-                                    <span>Fax: +1 916-875-2235</span>
-                                </div>
-                                <div style="margin-bottom: 10px;">
-                                    <img src="../assets/icons/email.svg" alt="location icon" class="footer-icon">
-                                    <span>Email:<span class="blue-text"> info@domain.ltd</span></span>
-                                </div>
-                                <div style="margin-bottom: 10px;">
-                                    <img src="../assets/icons/web.svg" alt="location icon" class="footer-icon">
-                                    <span>Website: <span class="blue-text"> www.codex-themes.com</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-grid-item">
-                        <div class="footer-block">
-                            <p class="footer-title">RECENT POSTS</p>
-                            <div class="post">
-                                <img src="https://mtv.vn/uploads/2023/02/25/meo-gg.jpg" alt="post-image"
-                                    class="post-img">
-                                <div class="post-content footer-text">
-                                    <div class="post-desc">
-                                        Proin gravida nibh vel velit auctor aliquet aenean
-                                    </div>
-                                    <div class="post-inf">
-                                        <p class="blue-text">27 Dec 2015</p>
-                                        <div>
-                                            <img src="../assets/icons/wechat.svg" alt="comment icon"
-                                                class="footer-icon">
-                                            <span>0</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post">
-                                <img src="https://mtv.vn/uploads/2023/02/25/meo-gg.jpg" alt="post-image"
-                                    class="post-img">
-                                <div class="post-content footer-text">
-                                    <div class="post-desc">
-                                        Proin gravida nibh vel velit auctor aliquet aenean...
-                                    </div>
-                                    <div class="post-inf">
-                                        <p class="blue-text">27 Dec 2015</p>
-                                        <div>
-                                            <img src="../assets/icons/wechat.svg" alt="comment icon"
-                                                class="footer-icon">
-                                            <span>0</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post">
-                                <img src="https://mtv.vn/uploads/2023/02/25/meo-gg.jpg" alt="post-image"
-                                    class="post-img">
-                                <div class="post-content footer-text">
-                                    <div class="post-desc">
-                                        Proin gravida nibh vel velit auctor aliquet aenean
-                                    </div>
-                                    <div class="post-inf">
-                                        <p class="blue-text">27 Dec 2015</p>
-                                        <div>
-                                            <img src="../assets/icons/wechat.svg" alt="comment icon"
-                                                class="footer-icon">
-                                            <span>0</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="footer-title">USEFUL LINKS</p>
-                            <ul class="ul-links footer-text">
-                                <li>General Information For Users</li>
-                                <li>General Information For Users</li>
-                                <li>General Information For Users</li>
-                                <li>General Information For Users</li>
-                                <li>General Information For Users</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-grid-item">
-                        <div class="footer-block">
-                            <p class="footer-title">EMAIL US</p>
-                            <input type="text" name="" id="" class="input email-inp" placeholder="Your name">
-                            <input type="text" name="" id="" class="input email-inp" placeholder="Your email">
-                            <textarea name="" id="" cols="30" rows="4" class="input email-inp"
-                                placeholder="Your message"></textarea>
-                            <button class="btn send-btn">SEND MESSAGE</button>
-
-                        </div>
-                        <div class="footer-block">
-                            <p class="footer-title">PROJECTS / CLIENTS ?</p>
-                            <div class="proj-grid-container">
-                                <div class="proj-grid-item"></div>
-                                <div class="proj-grid-item"></div>
-                                <div class="proj-grid-item"></div>
-                                <div class="proj-grid-item"></div>
-                                <div class="proj-grid-item"></div>
-                                <div class="proj-grid-item"></div>
-                            </div>
-                            <div class="dots">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-grid-item">
-                        <div>
-                            <p class="footer-title">FLICKR FEED</p>
-                            <div class="feed-grid-container">
-                                <div class="feed-grid-item"></div>
-                                <div class="feed-grid-item"></div>
-                                <div class="feed-grid-item"></div>
-                                <div class="feed-grid-item"></div>
-                                <div class="feed-grid-item"></div>
-                                <div class="feed-grid-item"></div>
-                                <div class="feed-grid-item"></div>
-                                <div class="feed-grid-item"></div>
-                                <div class="feed-grid-item"></div>
-
-                            </div>
-                        </div>
-                        <div>
-                            <p class="footer-title">NEWLETTERS</p>
-                            <div class="newletter">
-                                <p class="footer-text newletter-text">Subscribe to our MailChimp newsletter and stay up
-                                    to date with
-                                    all events coming
-                                    straight in your mailbox:</p>
-                                <div>
-                                    <div class="newletter-email">
-                                        <input type="text" name="" id="" class="input newletter-inp"
-                                            placeholder="Your email address">
-                                        <button class="btn newletter-btn">></button>
-                                    </div>
-
-                                    <p class="footer-text-note"><span class="blue-text">*</span> Personal information
-                                        will be
-                                        encrypted</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div></div>
-            </div>
-        </footer>
-</body>
-
+      </div>
+    </footer>
+    <div class="overlay" id="overlay"></div>
+    <script src="../index.js"></script>
+    <script src="shop_cart.js"></script>
+  </body>
 </html>

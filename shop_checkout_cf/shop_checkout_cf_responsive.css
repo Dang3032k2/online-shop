@@ -1,0 +1,17 @@
+@media screen and (min-width: 20px) and (max-width: 1000px) {
+  .order-grid-container {
+    grid-template-columns: none;
+  }
+}
+
+@media screen and (min-width: 20px) and (max-width: 768px) {
+  .order-desc {
+    grid-template-columns: none;
+  }
+}
+
+@media screen and (min-width: 20px) and (max-width: 470px) {
+  .order-table-row:first-child {
+    display: none;
+  }
+}

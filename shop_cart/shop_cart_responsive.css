@@ -1,0 +1,131 @@
+@media screen and (min-width: 1018px) and (max-width: 1100px) {
+  .item-name {
+    font-size: 10px;
+  }
+
+  .item-price {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 1103px) and (max-width: 1150px) {
+  .product-name {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .product-note {
+    margin-left: 10px;
+    font-size: 11px;
+    color: #abb9c2;
+  }
+}
+
+@media screen and (min-width: 20px) and (max-width: 768px) {
+  .cart-table-row:first-child {
+    display: none;
+  }
+
+  .cart-table-row {
+    grid-template-columns: none;
+  }
+
+  .cart-table-delete-item {
+    justify-content: end;
+    position: relative;
+    left: -6px;
+    top: 6px;
+  }
+
+  .cart-table-item {
+    grid-template-columns: none;
+  }
+
+  .cart-table-item-inf {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 6px;
+  }
+
+  .tfoot {
+    width: 100%;
+    height: 169px;
+    padding: 16px;
+    border: 1px solid #dfe5e7;
+    display: flex;
+  }
+
+  .tfoot-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: inherit;
+  }
+
+  .apply-coupon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .coupon-input {
+    width: 100%;
+  }
+
+  .cart-btn {
+    margin-left: 0px;
+  }
+
+  .apply-btn {
+    margin-top: 14px;
+  }
+
+  .update-checkout {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cart-calculate {
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+    row-gap: 36px;
+  }
+
+  .cal-text {
+    font-size: 20px;
+  }
+
+  .state-zip-inf {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .recommend-text {
+    font-size: 20px;
+  }
+
+  .recommend-items {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .recommend-item::before {
+    top: 0;
+    right: 0;
+  }
+
+  .recommend-item::after {
+    top: 32px;
+    right: 0px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .recommend-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
