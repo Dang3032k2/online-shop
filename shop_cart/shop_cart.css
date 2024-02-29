@@ -126,6 +126,10 @@
   background-color: #f5f7f6;
 }
 
+.input-focus:focus {
+  border: 1px solid #00bbd3;
+}
+
 .cart-btn {
   padding: 6px 12px;
   letter-spacing: 1px;

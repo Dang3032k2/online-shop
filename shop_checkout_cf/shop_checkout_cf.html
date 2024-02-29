@@ -26,37 +26,37 @@
             <img
               src="../assets/icons/twitter.svg"
               alt="twitter logo"
-              class="header-icon"
+              class="header-icon icon-hover"
             />
             <img
               src="../assets/icons/facebook.svg"
               alt="facebook logo"
-              class="header-icon"
+              class="header-icon icon-hover"
             />
             <img
               src="../assets/icons/linkedin.svg"
               alt="linkedin logo"
-              class="header-icon"
+              class="header-icon icon-hover"
             />
             <img
               src="../assets/icons/googleplus.svg"
               alt="googleplus logo"
-              class="header-icon"
+              class="header-icon icon-hover"
             />
             <img
               src="../assets/icons/instagram.svg"
               alt="instagram logo"
-              class="header-icon"
+              class="header-icon icon-hover"
             />
             <img
               src="../assets/icons/youtube.svg"
               alt="youtube logo"
-              class="header-icon"
+              class="header-icon icon-hover"
             />
             <img
               src="../assets/icons/pinterest.svg"
               alt="pinterest logo"
-              class="header-icon"
+              class="header-icon icon-hover"
             />
           </div>
         </div>
@@ -70,7 +70,7 @@
             <p class="header-menu-p">Shipping Terms</p>
           </div>
           <div class="wishlist-btn">
-            <button class="btn header-btn">My Wishlist</button>
+            <button class="btn header-btn btn-hover">My Wishlist</button>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
           <img src="../assets/icons/logo.svg" alt="logo" class="logo" />
           <span class="brand">THEGEM</span>
         </div>
-        <div class="navbar-buttons" id="drawer">
+        <div class="navbar-buttons drawer-close" id="drawer">
           <img
             src="../assets/icons/cross.svg"
             alt="exit"
@@ -105,18 +105,18 @@
             <img src="../assets/icons/cart.svg" alt="Go to cart" class="btn" />
           </div>
           <ul id="inline-list">
-            <li>HOME</li>
-            <li>PAGES</li>
-            <li>BLOG</li>
-            <li>PORTFOLIOS</li>
-            <li>SHOP</li>
-            <li>FEATURES</li>
-            <li>ELEMENTS</li>
+            <li class="color-hover">HOME</li>
+            <li class="color-hover">PAGES</li>
+            <li class="color-hover">BLOG</li>
+            <li class="color-hover">PORTFOLIOS</li>
+            <li class="color-hover">SHOP</li>
+            <li class="color-hover">FEATURES</li>
+            <li class="color-hover">ELEMENTS</li>
             <li>
               <img
                 src="../assets/icons/ukflag.svg"
                 alt="language"
-                class="navbar-icon header-flex btn"
+                class="navbar-icon header-flex btn icon-hover btn-transition"
               />
             </li>
             <li class="navbar-search">
@@ -124,30 +124,33 @@
                 type="text"
                 name="navbar-search-inp"
                 id="navbar-search-inp"
+                class="navbar-search-inp"
                 placeholder="Typing to search..."
               />
               <img
                 src="../assets/icons/search.svg"
                 alt="search icon"
-                class="navbar-icon header-flex btn"
+                class="navbar-icon header-flex btn icon-hover btn-transition"
                 id="search-icon"
-                onclick="openSearch(this)"
+                onclick="changeSearchDisplay(this,'open')"
               />
               <img
                 src="../assets/icons/cross.svg"
                 alt="exit"
-                class="navbar-icon header-flex navbar-cross-icon btn"
+                class="navbar-icon header-flex navbar-cross-icon btn icon-hover"
                 id="close-search"
-                onclick="closeSearch(this)"
+                onclick="changeSearchDisplay(this,'close')"
               />
             </li>
-            <li class="navbar-cart-icon">
-              <img
-                src="../assets/icons/shoppingbasket.svg"
-                alt="cart icon"
-                class="navbar-icon header-flex btn"
-              />
-              <div class="polygon"><span class="cart-quantity">2</span></div>
+            <li class="btn-transition">
+              <div class="navbar-cart-icon icon-hover">
+                <img
+                  src="../assets/icons/shoppingbasket.svg"
+                  alt="cart icon"
+                  class="navbar-icon header-flex btn"
+                />
+                <div class="polygon"><span class="cart-quantity">2</span></div>
+              </div>
             </li>
           </ul>
         </div>
@@ -570,15 +573,14 @@
         </div>
       </div>
     </footer>
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay overlay-close" id="overlay"></div>
     <script src="../index.js"></script>
     <script>
-      document
-        .getElementById('close-icon')
-        .addEventListener('click', function () {
-          var orderMessage = document.getElementById('order-success');
-          orderMessage.style.display = 'none';
-        });
+      const closeIcon = document.getElementById('close-icon');
+      closeIcon.onclick = () => {
+        const orderMessage = document.getElementById('order-success');
+        orderMessage.style.display = 'none';
+      };
     </script>
   </body>
 </html>

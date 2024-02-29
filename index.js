@@ -1,51 +1,54 @@
-document
-        .getElementById('navbar-menu')
-        .addEventListener('click', function () {
-          var drawer = document.getElementById('drawer');
-          var overlay = document.getElementById('overlay');
-          drawer.style.display = 'block';
-          overlay.style.display = 'block';
-          document.body.style.overflowY = 'hidden';
-        });
-      document
-        .getElementById('close-drawer')
-        .addEventListener('click', function () {
-          var drawer = document.getElementById('drawer');
-          var overlay = document.getElementById('overlay');
-          drawer.style.display = 'none';
-          overlay.style.display = 'none';
-          document.body.style.overflowY = 'unset';
-        });
-      document
-        .getElementById('close-icon')
-        .addEventListener('click', function () {
-          var orderMessage = document.getElementById('order-success');
-          orderMessage.style.display = 'none';
-        });
-      function openSearch(searchBtn) {
-        var searchInpElement = searchBtn.previousElementSibling;
-        var closeSearchInpElement = searchBtn.nextElementSibling;
-        var navbarSearchElement = searchBtn.parentNode;
-        var flagElement = navbarSearchElement.previousElementSibling;
-        var cartElement = navbarSearchElement.nextElementSibling;
-        searchBtn.style.display = 'none';
-        closeSearchInpElement.style.display = 'unset';
-        flagElement.style.display = 'none';
-        cartElement.style.display = 'none';
-        searchInpElement.style.width = '80%';
-        searchInpElement.style.border = '1px solid #99a9b5';
-      }
-      function closeSearch(closeSearchBtn) {
-        var openSearchInpElement = closeSearchBtn.previousElementSibling;
-        var searchInpElement = openSearchInpElement.previousElementSibling;
-        var navbarSearchElement = closeSearchBtn.parentNode;
-        var flagElement = navbarSearchElement.previousElementSibling;
-        var cartElement = navbarSearchElement.nextElementSibling;
-        closeSearchBtn.style.display = 'none';
-        openSearchInpElement.style.display = 'unset';
-        flagElement.style.display = 'unset';
-        cartElement.style.display = 'flex';
-        searchInpElement.style.width = '0';
-        searchInpElement.style.border = 'none';
-        searchInpElement.value = '';
-      }
+const navbarMenu = document.getElementById('navbar-menu');
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+
+navbarMenu.onclick = () => {
+  drawer.classList.remove('drawer-close');
+  drawer.classList.add('drawer-open');
+  overlay.classList.remove('overlay-close');
+  overlay.classList.add('overlay-open');
+  document.body.style.overflowY = 'hidden';
+};
+
+const closeDrawer = document.getElementById('close-drawer');
+closeDrawer.onclick = () => {
+  drawer.classList.remove('drawer-open');
+  drawer.classList.add('drawer-close');
+  overlay.classList.remove('overlay-open');
+  overlay.classList.add('overlay-close');
+  document.body.style.overflowY = 'unset';
+};
+
+const changeSearchDisplay = (button, type) => {
+  const navbarSearchElement = button.parentNode;
+  const flagElement = navbarSearchElement.previousElementSibling;
+  const cartElement = navbarSearchElement.nextElementSibling;
+  if (type === 'open') {
+    const searchInpElement = button.previousElementSibling;
+    const closeSearchInpElement = button.nextElementSibling;
+    button.classList.remove('visible');
+    button.classList.add('hidden');
+    closeSearchInpElement.style.display = 'unset';
+    flagElement.querySelector('img').classList.remove('visible');
+    flagElement.querySelector('img').classList.add('hidden');
+    cartElement.classList.remove('visible');
+    cartElement.classList.add('hidden');
+    searchInpElement.classList.add('hidden');
+    searchInpElement.classList.add('search-inp-visible');
+    searchInpElement.focus();
+  } else if (type === 'close') {
+    const openSearchInpElement = button.previousElementSibling;
+    const searchInpElement = openSearchInpElement.previousElementSibling;
+    button.style.display = 'none';
+    searchInpElement.classList.remove('search-inp-visible');
+    searchInpElement.classList.add('hidden');
+    searchInpElement.value = '';
+    openSearchInpElement.classList.remove('hidden');
+    openSearchInpElement.classList.add('visible');
+    openSearchInpElement.style.display = 'unset';
+    flagElement.querySelector('img').classList.remove('hidden');
+    flagElement.querySelector('img').classList.add('visible');
+    cartElement.classList.remove('hidden');
+    cartElement.classList.add('visible');
+  }
+};
