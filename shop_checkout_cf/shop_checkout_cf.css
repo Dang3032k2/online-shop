@@ -1,0 +1,157 @@
+.checkout-body {
+  padding: 70px 0px;
+}
+
+#order-success {
+  height: 80px;
+  background-color: #84ec71;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+
+.order-success-content {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.checked-icon {
+  width: 40px;
+}
+
+.order-success-text {
+  color: #3c3950;
+  margin-left: 14px;
+  font-size: 20px;
+}
+
+.order-inf {
+  list-style-type: none;
+  padding: 30px 0px;
+  color: #5f7280;
+}
+
+.order-inf li {
+  padding: 8px 0px;
+}
+
+.order-inf li::before {
+  content: '';
+  display: inline-block;
+  background-image: url(../assets/icons/SquareCheckbox.svg);
+  width: 14px;
+  height: 14px;
+  background-size: contain;
+  margin-right: 8px;
+}
+
+.dark-text {
+  color: #3c3950;
+  font-weight: 600;
+}
+
+.checkout-text {
+  color: #5f7280;
+}
+
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+}
+
+#close-icon {
+  width: 24px;
+}
+
+.order-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px;
+  padding-top: 50px;
+}
+
+.order-title {
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: #3c3950;
+}
+
+.order-table {
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.order-table-row {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+
+.order-table-head {
+  background-color: #b6c6c9;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.order-table-row:nth-child(odd) {
+  background-color: #f0f3f2;
+}
+
+.order-table-head {
+  background-color: #b6c6c9;
+  padding: 10px;
+}
+
+.order-table-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-inf {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+}
+
+.item-quantity-total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.item-quantity {
+  color: #5f7280;
+}
+
+.item-img {
+  width: 80px;
+  padding: 10px 14px;
+}
+
+.checkout-cart-table {
+  margin-top: 30px;
+}
+
+.checkout-cart-table td:first-child {
+  background-color: #f0f3f2;
+}
+
+.order-desc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 56px;
+  color: #5f7280;
+}
+
+.order-ul {
+  list-style-type: none;
+  padding-top: 20px;
+}
+
+.order-ul li {
+  padding: 6px 0px;
+}
