@@ -119,7 +119,7 @@
               <img
                 src="../assets/icons/ukflag.svg"
                 alt="language"
-                class="navbar-icon header-flex btn icon-hover btn-transition"
+                class="navbar-icon header-flex btn icon-hover"
               />
             </li>
             <li class="navbar-search">
@@ -133,7 +133,7 @@
               <img
                 src="../assets/icons/search.svg"
                 alt="search icon"
-                class="navbar-icon header-flex btn icon-hover btn-transition"
+                class="navbar-icon header-flex btn icon-hover"
                 id="search-icon"
                 onclick="changeSearchDisplay(this,'open')"
               />
@@ -145,14 +145,91 @@
                 onclick="changeSearchDisplay(this,'close')"
               />
             </li>
-            <li class="btn-transition">
-              <div class="navbar-cart-icon icon-hover">
+            <li>
+              <div class="navbar-cart-icon">
                 <img
                   src="../assets/icons/shoppingbasket.svg"
                   alt="cart icon"
                   class="navbar-icon header-flex btn"
                 />
                 <div class="polygon"><span class="cart-quantity">2</span></div>
+                <div class="cart-widget cart-widget-close">
+                  <div class="cart-widget-item">
+                    <div class="cart-widget-item-image">
+                      <img
+                        src="https://sg-live-01.slatic.net/p/04b2780f1ccbe02b95244127c025cb2a.jpg"
+                        alt="item image"
+                        class="cart-widget-item-image-size"
+                      />
+                    </div>
+
+                    <div class="cart-widget-item-inf">
+                      <p>Product Name</p>
+                      <p class="cart-widget-item-quantity">
+                        2 x <span class="cart-widget-item-price">$35.89</span>
+                      </p>
+                    </div>
+                    <img
+                      src="../assets/icons/cross.svg"
+                      class="cart-widget-item-delete icon-hover"
+                      alt="delete item"
+                    />
+                  </div>
+                  <div class="cart-widget-item">
+                    <div class="cart-widget-item-image">
+                      <img
+                        src="https://sg-live-01.slatic.net/p/04b2780f1ccbe02b95244127c025cb2a.jpg"
+                        alt="item image"
+                        class="cart-widget-item-image-size"
+                      />
+                    </div>
+                    <div class="cart-widget-item-inf">
+                      <p>Product Name</p>
+                      <p class="cart-widget-item-quantity">
+                        2 x <span class="cart-widget-item-price">$35.89</span>
+                      </p>
+                    </div>
+                    <img
+                      src="../assets/icons/cross.svg"
+                      class="cart-widget-item-delete icon-hover"
+                      alt="delete item"
+                    />
+                  </div>
+                  <div class="cart-widget-item">
+                    <div class="cart-widget-item-image">
+                      <img
+                        src="https://sg-live-01.slatic.net/p/04b2780f1ccbe02b95244127c025cb2a.jpg"
+                        alt="item image"
+                        class="cart-widget-item-image-size"
+                      />
+                    </div>
+                    <div class="cart-widget-item-inf">
+                      <p>Product Name</p>
+                      <p class="cart-widget-item-quantity">
+                        2 x <span class="cart-widget-item-price">$35.89</span>
+                      </p>
+                    </div>
+                    <img
+                      src="../assets/icons/cross.svg"
+                      class="cart-widget-item-delete icon-hover"
+                      alt="delete item"
+                    />
+                  </div>
+                  <div class="cart-widget-summary">
+                    <div class="cart-widget-summary-child">
+                      <p class="cart-widget-summary-child-text">Subtotal:</p>
+                      <p class="cart-widget-summary-child-price">$2589.99</p>
+                    </div>
+                    <div class="cart-widget-summary-child">
+                      <button class="btn cart-widget-btn blue-btn btn-hover">
+                        VIEW CART
+                      </button>
+                      <button class="btn cart-widget-btn dark-btn btn-hover">
+                        CHECKOUT
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
